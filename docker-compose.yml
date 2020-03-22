@@ -1,0 +1,22 @@
+version: "3"
+services:
+  frontend:
+    container_name: force-site
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: force/force-site
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/src/app
+  backend:
+    container_name: foce_server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: force/foce_server
+    ports:
+      - "6001:6001"
+    volumes:
+      - ./server:/usr/src/app

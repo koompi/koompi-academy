@@ -1,0 +1,86 @@
+{
+  "name": "koompi-academy",
+  "version": "0.1.0",
+  "description": "KOOMPI academy is a education platform",
+  "author": "KOOMPI Digital",
+  "private": true,
+  "dependencies": {
+    "@apollo/react-hooks": "^3.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@hapi/joi": "^15.1.0",
+    "@tinymce/tinymce-react": "^3.3.2",
+    "antd": "^3.20.5",
+    "apollo-boost": "^0.4.4",
+    "apollo-upload-client": "^11.0.0",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.0.0",
+    "draft-js": "^0.11.1",
+    "electron-is-dev": "^1.1.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.4.2",
+    "griffith": "^1.5.0",
+    "html-react-parser": "^0.9.2",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.9",
+    "npm": "^6.11.3",
+    "plyr": "^3.5.6",
+    "react": "^16.8.6",
+    "react-apollo": "^3.0.0",
+    "react-content-loader": "^4.3.0",
+    "react-dom": "^16.8.6",
+    "react-html5video": "^2.5.1",
+    "react-icons": "^3.9.0",
+    "react-markdown": "^4.2.2",
+    "react-mde": "^7.6.2",
+    "react-player": "^1.12.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-video-markers": "^1.1.1",
+    "reqwest": "^2.0.5",
+    "showdown": "^1.9.0",
+    "sweetalert2": "^8.15.2",
+    "zxcvbn": "^4.4.2"
+  },
+  "homepage": "./",
+  "main": "public/electron.js",
+  "scripts": {
+    "start-react": "react-scripts start",
+    "build-react": "react-scripts build",
+    "test-react": "react-scripts test --env=jsdom",
+    "eject-react": "react-scripts eject",
+    "build-electron": "electron-builder",
+    "build": "yarn build-react && yarn build-electron",
+    "start": "concurrently \"cross-env BROWSER=none yarn start-react\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "build": {
+    "appId": "react.electron",
+    "win": {
+      "icon": "build/icon.png"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^7.1.0",
+    "electron-builder": "^22.1.0",
+    "wait-on": "^3.3.0"
+  }
+}
